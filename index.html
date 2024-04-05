@@ -1,146 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disha Computer Institute</title>
-    <style>
-        /* Add your custom styles here */
-        
-	body {
-            font-family: Arial, sans-serif;
-            margin: 0px;
-            padding: 0px;
-        }
-        header {
-            text-align: center;
-            background-color: #4CAF50;
-            color: white;
-            padding: 0.1px;
- background-image: url('data:image/jpeg;base64,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'); /* Replace 'your-image-url.jpg' with the actual path or URL of your image */
-      background-size: cover; /* Adjust the background size as needed */
-      height: 300px; /* Set the desired height for your header */
-      text-align: center;
-      color: #fff; /* Set the text color to contrast with the background */
-      padding-top: 50px; /* Adjust the padding as needed */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 0.5em;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5em 1em;
-        }
-
-        section {
-            margin: 0px 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 0em;
-            background-color: #333;
-            color: white;
-           position: bottom;
-           bottom: 10;
-  margin: 0px;
-        }
-    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PeerChat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
-
 <body>
 
-    <header>
-        <H1 ><span style="font-size:80px;font-family: 'Arial Black'">DiSHA</span></h1>
-   <p style="margin:-35px;font-size:30px"><b>Computer Institute</b></p>
-        <p style="margin:34px;font-size:20px">Experts in Computer Training</p>
-    </header>
+    <div id="videos">
+        <video class="video-player" id="user-1" autoplay playsinline></video>
+        <video class="video-player" id="user-2" autoplay playsinline></video>
+    </div>
 
-    <nav>
-        <a href="#Intro">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#about">About</a>
-        <a href="#certificate">Certificate</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#training">Corporate Training</a>
-        <a href="#franchise">Franchisee Enquiry</a>
-        <a href="#payment">Payment</a>
-        <a href="#admission">Online Admission</a>
-    </nav>
-<div  style="margin:34px;font-size:20px>
-    <section id="Intro">
-        <h2>Introduction</h2>
-        <!-- Introduction -->	
-        <div>
-            <h3>
-Disha Launch
-Disha Computer Institute is fastest growing computer education franchise with more then 100 centers. Disha Computer Institute is offering with the low cost in both rurel and urben areas of india. Disha Computer Institute franchise will be the perfect platform for business.</h3>
-              <!-- Add more courses similarly -->
-    </section>
-    <section id="learning-at-disha">
-        <h2>Learning At Disha</h2>
-        <p>Why to join Disha:</p>
-        <ul>
-            <li>Low fees & 100% Quality</li>
-            <li>Ample time for practice with latest peripherals</li>
-            <li>Experience & Trained Faculty</li>
-            <li>Network of 100 branches all over India</li>
-        </ul>
-    </section>
+    <div id="controls">
 
-    <section id="e-learning">
-        <h2>E Learning</h2>
-        <p>Disha developed e-learning software for Disha Students. That’s changing the way the world learns. More than
-            40,000+ students include all the branches learn from e-learning software of Disha.</p>
-    </section>
+        <div class="control-container" id="camera-btn">
+            <img src="icons/camera.png" />
+        </div>
 
-    <section id="franchise">
-        <h2>Franchise</h2>
-        <p>Disha Computer Institute is the fastest-growing computer education franchise with more than 100 centers. Disha
-            Computer Institute is offering with low cost in both rural and urban areas of India. Disha Computer Institute
-            franchise will be the perfect platform for business.</p>
-    </section>
+        <div class="control-container" id="mic-btn">
+            <img src="icons/mic.png" />
+        </div>
 
-    <section id="training">
-        <h2>Corporate Training</h2>
-        <p>Our foray into Corporate Training is based on our sharp understanding of the IT needs of the industry.
-            Companies in the public and private sectors have benefited from our professional expertise in imparting IT
-            Training. Our alliances with leading institutions keep us aware of the Information Technology industry.</p>
-    </section>
+        <a href="lobby.html">
+            <div class="control-container" id="leave-btn">
+                <img src="icons/phone.png" />
+            </div>
+        </a>
 
-    <section id="enquiry-form">
-        <h2>Enquiry Form</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-
-            <label for="mobile">Mobile:</label>
-            <input type="text" id="mobile" name="mobile">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment"></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-</div>
-    <footer>
-        <p>&copy; 2016 all rights reserved.</p>
-        <p>Corporate Office: B19, Krishnai Apartment, Sanghvi Nagar, Pune 411 007, Maharashtra, India</p>
-        <p>Contact: 020 4601 1745 | Email: info@dishagroup.in</p>
-        <p>Powered by Infisoft Technologies</p>
-    </footer>
-
+    </div>
+    
 </body>
-
+<script src='agora-rtm-sdk-1.4.4.js'></script>
+<script src='main.js'></script>
 </html>
